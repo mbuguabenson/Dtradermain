@@ -57,7 +57,9 @@ export const getAppId = () => {
     const platform = window.sessionStorage.getItem('config.platform');
     const is_bot = isBot();
     // Added platform at the top since this should take precedence over the config_app_id
-    if (platform && platform_app_ids[platform as keyof typeof platform_app_ids]) {
+    if (process.env.APP_ID) {
+        app_id = process.env.APP_ID;
+    } else if (platform && platform_app_ids[platform as keyof typeof platform_app_ids]) {
         app_id = platform_app_ids[platform as keyof typeof platform_app_ids];
     } else if (config_app_id) {
         app_id = config_app_id;
