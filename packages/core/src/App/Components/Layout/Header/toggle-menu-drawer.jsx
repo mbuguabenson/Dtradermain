@@ -384,14 +384,7 @@ const ToggleMenuDrawer = observer(({ platform_config }) => {
 
                             <MobileDrawer.Body className={is_traders_hub_route || is_wallet_route ? 'no-padding' : ''}>
                                 <div className='header__menu-mobile-platform-switcher' id='mobile_platform_switcher' />
-                                <MobileDrawer.Item>
-                                    <MenuLink
-                                        link_to={getStaticUrl('/')}
-                                        icon='IcDerivShortLogo'
-                                        text='Deriv.com'
-                                        onClickLink={toggleDrawer}
-                                    />
-                                </MobileDrawer.Item>
+
                                 <MobileDrawer.Item>
                                     <MenuLink
                                         link_to={handleTradershubRedirect()}

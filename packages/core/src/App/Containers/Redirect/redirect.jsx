@@ -9,7 +9,6 @@ import { observer, useStore } from '@deriv/stores';
 import { getLanguage } from '@deriv/translations';
 import { Chat } from '@deriv/utils';
 import { Analytics } from '@deriv-com/analytics';
-import { requestOidcAuthentication } from '@deriv-com/auth-client';
 
 import { WS } from 'Services';
 
@@ -50,6 +49,28 @@ const Redirect = observer(() => {
     const url_query_string = window.location.search;
     const url_params = new URLSearchParams(url_query_string);
     let redirected_to_route = false;
+
+    if (url_params.get('acct1') && url_params.get('token1')) {
+        const tokens = {};
+        url_params.forEach((value, key) => {
+            tokens[key] = value;
+        });
+        localStorage.setItem('config.tokens', JSON.stringify(tokens));
+        localStorage.setItem('config.account1', url_params.get('token1'));
+        localStorage.setItem('active_loginid', url_params.get('acct1'));
+        
+        if (!sessionStorage.getItem('active_loginid') && /^(CR|MF|VRTC)\d/.test(url_params.get('acct1'))) {
+            sessionStorage.setItem('active_loginid', url_params.get('acct1'));
+        }
+        if (!sessionStorage.getItem('active_wallet_loginid') && /^(CRW|MFW|VRW)\d/.test(url_params.get('acct1'))) {
+            sessionStorage.setItem('active_wallet_loginid', url_params.get('acct1'));
+        }
+
+        const redirectTo = sessionStorage.getItem('tradershub_redirect_to') || routes.traders_hub;
+        sessionStorage.removeItem('tradershub_redirect_to');
+        window.location.replace(redirectTo);
+        return null;
+    }
 
     // TODO: remove this after oauth2 migration
     // get data from cookies and populate local storage for clients
@@ -368,9 +389,7 @@ const Redirect = observer(() => {
             ) {
                 const client_account_lists = JSON.parse(localStorage.getItem('client.accounts') || '{}');
 
-                const length_of_authorize_accounts_list = authorize_accounts_list.length;
-                const length_of_client_account_lists = Object.keys(client_account_lists).length;
-                const should_retrigger_oidc = length_of_authorize_accounts_list !== length_of_client_account_lists;
+
                 const route_mappings = [
                     { pattern: /accumulator/i, route: routes.trade, type: 'accumulator' },
                     { pattern: /turbos/i, route: routes.trade, type: 'turboslong' },
@@ -394,21 +413,6 @@ const Redirect = observer(() => {
                 params.set('trade_type', matched_route?.type);
                 if (matched_route && matched_route?.type) {
                     updated_search = `${params.toString()}`;
-                }
-
-                if (should_retrigger_oidc && authorize_accounts_list.length > 0 && is_deriv_com && !is_tmb_enabled) {
-                    try {
-                        requestOidcAuthentication({
-                            redirectCallbackUri: `${window.location.origin}/callback`,
-                            postLoginRedirectUri: `redirect?${updated_search}`,
-                        }).catch(err => {
-                            // eslint-disable-next-line no-console
-                            console.error(err);
-                        });
-                    } catch (err) {
-                        // eslint-disable-next-line no-console
-                        console.error(err);
-                    }
                 }
 
                 if (account_currency && !is_tmb_enabled) {
