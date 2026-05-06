@@ -4,7 +4,8 @@
     "version": "0.0.1",
     "type": "module",
     "engines": {
-        "node": ">=20.0.0"
+        "node": "18.x",
+        "npm": "9.x"
     },
     "scripts": {
         "start": "rsbuild dev -o",

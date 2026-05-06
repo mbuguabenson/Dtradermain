@@ -1,0 +1,29 @@
+{
+  "name": "bot-trader-app-v2",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "Profithubtool/src",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run build",
+        "cwd": "Profithubtool"
+      }
+    },
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run start",
+        "cwd": "Profithubtool"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run test",
+        "cwd": "Profithubtool"
+      }
+    }
+  }
+}
