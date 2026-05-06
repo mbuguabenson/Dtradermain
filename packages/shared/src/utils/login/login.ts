@@ -45,13 +45,15 @@ export const loginUrl = ({ language }: TLoginUrl) => {
     }`;
 
     const getOAuthUrl = () => {
+        const redirect_uri = `${window.location.protocol}//${window.location.host}${window.location.pathname === '/' ? '' : window.location.pathname}`;
         return `https://oauth.${
             deriv_urls.DERIV_HOST_NAME
-        }/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}&brand=${website_name.toLowerCase()}&redirect=home&state=`;
+        }/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}&brand=${website_name.toLowerCase()}&redirect_uri=${redirect_uri}&state=`;
     };
 
     if (server_url && /qa/.test(server_url)) {
-        return `https://${server_url}/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}&brand=${website_name.toLowerCase()}&redirect=home&state=`;
+        const redirect_uri = `${window.location.protocol}//${window.location.host}${window.location.pathname === '/' ? '' : window.location.pathname}`;
+        return `https://${server_url}/oauth2/authorize?app_id=${getAppId()}&l=${language}${marketing_queries}&brand=${website_name.toLowerCase()}&redirect_uri=${redirect_uri}&state=`;
     }
 
     if (getAppId() === domain_app_ids[window.location.hostname as keyof typeof domain_app_ids]) {

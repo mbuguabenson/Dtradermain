@@ -101,13 +101,14 @@ const RootComponent = observer(props => {
 
     if (
         !is_client_store_initialized ||
-        (has_wallet && !isHubRedirectionLoaded) ||
-        (has_wallet && isHubRedirectionLoaded && isHubRedirectionEnabled)
+        (has_wallet && !isHubRedirectionLoaded)
     ) {
         return <Loading is_fullscreen />;
     }
 
-    return has_wallet ? (
+    const is_profithub = window.localStorage.getItem('config.app_id') === '113830' || process.env.APP_ID === '113830';
+
+    return has_wallet && !is_profithub ? (
         <Wallets
             isWalletsOnboardingTourGuideVisible={is_wallets_onboarding_tour_guide_visible}
             logout={async () => {
