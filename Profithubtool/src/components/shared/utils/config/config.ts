@@ -6,14 +6,14 @@ export const API_MODE: 'legacy' | 'new' = 'legacy';
 
 export const APP_IDS = {
     LOCALHOST: 36300,
-    TMP_STAGING: 121856,
-    STAGING: 121856,
-    STAGING_BE: 121856,
-    STAGING_ME: 121856,
-    PRODUCTION: 121856,
-    PRODUCTION_BE: 121856,
-    PRODUCTION_ME: 121856,
-    VERCEL: 121856,
+    TMP_STAGING: 113830,
+    STAGING: 113830,
+    STAGING_BE: 113830,
+    STAGING_ME: 113830,
+    PRODUCTION: 113830,
+    PRODUCTION_BE: 113830,
+    PRODUCTION_ME: 113830,
+    VERCEL: 113830,
 };
 
 export const livechat_license_id = 12049137;
@@ -28,7 +28,7 @@ export const domain_app_ids = {
     'dbot.deriv.be': APP_IDS.PRODUCTION_BE,
     'dbot.deriv.me': APP_IDS.PRODUCTION_ME,
     '22-dec.vercel.app': APP_IDS.VERCEL,
-    'profithubtool.vercel.app': '121856',
+    'profithubtool.vercel.app': '113830',
 };
 
 export const getCurrentProductionDomain = () =>
@@ -149,7 +149,7 @@ export const getDebugServiceWorker = () => {
 
 const legacyGenerateOAuthURL = () => {
     const is_local = isLocal();
-    const app_id = is_local ? APP_IDS.LOCALHOST : '121856';
+    const app_id = is_local ? APP_IDS.LOCALHOST : '113830';
     const login_url = `https://oauth.deriv.com/oauth2/authorize?app_id=${app_id}&brand=deriv&redirect=home&state=`;
  
     console.log('[Config] Generated Legacy OAuth URL:', login_url);
