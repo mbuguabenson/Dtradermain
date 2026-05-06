@@ -44,7 +44,7 @@ const TradersHubHomeButton = observer(() => {
                 <Icon icon={'IcAppstoreTradersHubHome'} size={16} />
             </div>
             <Text className='traders-hub-header__tradershub--text'>
-                <Localize i18n_default_text="Trader's Hub" />
+                <Localize i18n_default_text="Profithub" />
             </Text>
         </div>
     );

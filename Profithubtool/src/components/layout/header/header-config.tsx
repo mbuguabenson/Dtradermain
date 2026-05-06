@@ -71,7 +71,7 @@ export const TRADERS_HUB_LINK_CONFIG = {
     as: 'a',
     href: standalone_routes.traders_hub,
     icon: <TradershubLogo iconSize='xs' />,
-    label: "Trader's Hub",
+    label: "Profithub",
 };
 
 export const MenuItems: MenuItemsConfig[] = [

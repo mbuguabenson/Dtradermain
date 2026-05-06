@@ -66,7 +66,13 @@ const Redirect = observer(() => {
             sessionStorage.setItem('active_wallet_loginid', url_params.get('acct1'));
         }
 
-        const redirectTo = sessionStorage.getItem('tradershub_redirect_to') || routes.traders_hub;
+        // If loaded inside an iframe or redirect_to is provided, go directly to trading page.
+        // Otherwise fall back to the tradershub or traders_hub route.
+        const redirect_to_param = url_params.get('redirect_to');
+        const is_in_iframe = window.self !== window.top;
+        const redirectTo = redirect_to_param
+            || sessionStorage.getItem('tradershub_redirect_to')
+            || (is_in_iframe ? '/dtrader' : routes.traders_hub);
         sessionStorage.removeItem('tradershub_redirect_to');
         window.location.replace(redirectTo);
         return null;

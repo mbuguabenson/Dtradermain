@@ -105,12 +105,12 @@ export default defineConfig({
     server: {
         port: 8446,
         compress: true,
-        headers: {
+        /* headers: {
             'Cross-Origin-Opener-Policy': 'same-origin',
             'Cross-Origin-Embedder-Policy': 'anonymous-only',
             'Cross-Origin-Resource-Policy': 'cross-origin',
             'Access-Control-Allow-Origin': '*',
-        },
+        }, */
         proxy: {
             '/oauth2': {
                 target: 'https://oauth.deriv.com',
