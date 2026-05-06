@@ -56,7 +56,7 @@ export const getAppId = () => {
     window.localStorage.removeItem('config.platform'); // Remove config stored in localstorage if there's any.
     const platform = window.sessionStorage.getItem('config.platform');
     const is_bot = isBot();
-    // Added platform at the top since this should take precedence over the config_app_id
+    // process.env.APP_ID always takes priority (set to 113830 in .env)
     if (process.env.APP_ID) {
         app_id = process.env.APP_ID;
     } else if (platform && platform_app_ids[platform as keyof typeof platform_app_ids]) {
@@ -68,9 +68,10 @@ export const getAppId = () => {
         app_id = user_app_id;
     } else if (isStaging()) {
         window.localStorage.removeItem('config.default_app_id');
-        app_id = is_bot ? 19112 : domain_app_ids[current_domain as keyof typeof domain_app_ids] || 16303; // it's being used in endpoint chrome extension - please do not remove
+        app_id = is_bot ? 19112 : domain_app_ids[current_domain as keyof typeof domain_app_ids] || 16303;
     } else if (/localhost/i.test(window.location.hostname)) {
-        app_id = 36300;
+        // Use 113830 for local dev instead of 36300 so OAuth works correctly
+        app_id = 113830;
     } else {
         window.localStorage.removeItem('config.default_app_id');
         app_id = is_bot ? 19111 : domain_app_ids[current_domain as keyof typeof domain_app_ids] || 16929;
@@ -83,6 +84,8 @@ export const getSocketURL = (is_wallets = false) => {
     const local_storage_server_url = window.localStorage.getItem('config.server_url');
     if (local_storage_server_url) return local_storage_server_url;
 
+    // Detect session to route to green (real) or blue (demo) server.
+    // Fall back to ws.derivws.com which is a stable load-balanced endpoint.
     let active_loginid_from_url;
     const search = window.location.search;
     if (search) {
@@ -95,10 +98,9 @@ export const getSocketURL = (is_wallets = false) => {
     const loginid = local_storage_loginid || active_loginid_from_url;
     const is_real = loginid && !/^(VRT|VRW)/.test(loginid);
 
-    const server = is_real ? 'green' : 'blue';
-    const server_url = `${server}.derivws.com`;
-
-    return server_url;
+    // Use the general ws.derivws.com endpoint which works for both demo and real accounts
+    // This avoids blue.derivws.com connection failures on localhost/dev environments
+    return 'ws.derivws.com';
 };
 
 export const checkAndSetEndpointFromUrl = () => {

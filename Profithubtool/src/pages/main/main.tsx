@@ -78,7 +78,6 @@ const AppWrapper = observer(() => {
         'free_bots',
         'signals',
         'signal_centre',
-        'pro_tool',
         'smart_auto',
         'marketkiller',
         'over_under',
@@ -306,14 +305,42 @@ const AppWrapper = observer(() => {
                                 }
                                 id='id-dtrader'
                             >
-                                <div style={{ width: '100%', height: 'calc(100vh - 100px)', overflow: 'hidden' }}>
-                                    <iframe 
-                                        src={process.env.DTRADER_URL} 
-                                        style={{ width: '100%', height: '100%', border: 'none' }}
-                                        title="DTrader"
-                                        allow="clipboard-read; clipboard-write; geolocation; microphone; camera; display-capture"
-                                    />
-                                </div>
+                                {(() => {
+                                    // Build the DTrader URL with session tokens so it auto-logs in
+                                    const baseUrl = process.env.DTRADER_URL || 'https://localhost:8443';
+                                    let dtraderUrl = baseUrl;
+                                    try {
+                                        const accounts = JSON.parse(localStorage.getItem('client.accounts') || '{}');
+                                        const activeLoginId = sessionStorage.getItem('active_loginid') || localStorage.getItem('active_loginid');
+                                        if (activeLoginId && accounts[activeLoginId]) {
+                                            const params = new URLSearchParams();
+                                            let idx = 1;
+                                            // Pass all accounts so DTrader can switch
+                                            Object.entries(accounts).forEach(([loginid, data]: [string, any]) => {
+                                                if (data.token) {
+                                                    params.set(`acct${idx}`, loginid);
+                                                    params.set(`token${idx}`, data.token);
+                                                    if (loginid === activeLoginId) params.set('cur1', data.currency || '');
+                                                    idx++;
+                                                }
+                                            });
+                                            dtraderUrl = `${baseUrl}?${params.toString()}`;
+                                        }
+                                    } catch (e) {
+                                        // fallback to base URL if token reading fails
+                                    }
+                                    return (
+                                        <div style={{ width: '100%', height: 'calc(100vh - 100px)', overflow: 'hidden' }}>
+                                            <iframe
+                                                key={dtraderUrl}
+                                                src={dtraderUrl}
+                                                style={{ width: '100%', height: '100%', border: 'none' }}
+                                                title="DTrader"
+                                                allow="clipboard-read; clipboard-write; geolocation; microphone; camera; display-capture"
+                                            />
+                                        </div>
+                                    );
+                                })()}
                             </div>
                             <div
                                 label={

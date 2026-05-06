@@ -1,5 +1,8 @@
 {
     "buildCommand": "npm run build:prod",
     "outputDirectory": "packages/core/dist",
+    "env": {
+        "APP_ID": "113830"
+    },
     "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "/index.html" }]
 }
