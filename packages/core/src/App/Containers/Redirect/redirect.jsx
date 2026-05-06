@@ -72,7 +72,7 @@ const Redirect = observer(() => {
         const is_in_iframe = window.self !== window.top;
         const redirectTo = redirect_to_param
             || sessionStorage.getItem('tradershub_redirect_to')
-            || (is_in_iframe ? '/dtrader' : routes.traders_hub);
+            || (is_in_iframe ? '/dtrader' : routes.trade);
         sessionStorage.removeItem('tradershub_redirect_to');
         window.location.replace(redirectTo);
         return null;
@@ -407,7 +407,7 @@ const Redirect = observer(() => {
                     { pattern: /dbot/i, route: routes.bot },
                 ];
 
-                const default_route = routes.traders_hub;
+                const default_route = routes.trade;
 
                 const matched_route = route_mappings.find(({ pattern }) =>
                     pattern.test(url_query_string || history.location.search)

@@ -2404,7 +2404,7 @@ export default class ClientStore extends BaseStore {
 
             const redirect_url = sessionStorage.getItem('redirect_url');
 
-            const target_url = routes.traders_hub;
+            const target_url = routes.trade;
 
             if (
                 (redirect_url?.endsWith(routes.trade) ||
