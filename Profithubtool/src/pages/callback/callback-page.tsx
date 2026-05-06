@@ -171,9 +171,13 @@ const CallbackPage = observer(() => {
                     return;
                 }
 
-                // 1. Save minimal auth data needed for API
+                // 1. Save auth data for both apps to share
                 localStorage.setItem('accountsList', JSON.stringify(accountsList));
                 localStorage.setItem('clientAccounts', JSON.stringify(clientAccounts));
+                
+                // Also save in DTrader format for seamless cross-app login
+                localStorage.setItem('client.accounts', JSON.stringify(clientAccounts));
+                localStorage.setItem('config.tokens', JSON.stringify(tokens));
 
                 // Default to the first account (acct1) as active
                 const firstToken = tokens['token1'];
@@ -181,6 +185,7 @@ const CallbackPage = observer(() => {
 
                 if (firstToken && firstAcct) {
                     localStorage.setItem('authToken', firstToken);
+                    localStorage.setItem('config.account1', firstToken);
                     localStorage.setItem('active_loginid', firstAcct);
                     Cookies.set('logged_state', 'true', { expires: 30, path: '/' });
                 } else {
@@ -188,6 +193,7 @@ const CallbackPage = observer(() => {
                     const firstKey = Object.keys(accountsList)[0];
                     if (firstKey) {
                         localStorage.setItem('authToken', accountsList[firstKey]);
+                        localStorage.setItem('config.account1', accountsList[firstKey]);
                         localStorage.setItem('active_loginid', firstKey);
                         Cookies.set('logged_state', 'true', { expires: 30, path: '/' });
                     }
