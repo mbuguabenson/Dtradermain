@@ -301,14 +301,14 @@ const AppWrapper = observer(() => {
                                             width='20px'
                                             fill='var(--text-general)'
                                         />
-                                        <Localize i18n_default_text='DTrader' />
+                                        <Localize i18n_default_text='Manual trader' />
                                     </div>
                                 }
                                 id='id-dtrader'
                             >
                                 <div style={{ width: '100%', height: 'calc(100vh - 100px)', overflow: 'hidden' }}>
                                     <iframe 
-                                        src="https://localhost:8443" 
+                                        src={process.env.DTRADER_URL} 
                                         style={{ width: '100%', height: '100%', border: 'none' }}
                                         title="DTrader"
                                         allow="clipboard-read; clipboard-write; geolocation; microphone; camera; display-capture"
