@@ -71,6 +71,7 @@ const AppWrapper = observer(() => {
     const [smart_tools_tab, setSmartToolsTab] = React.useState<'smart_auto' | 'digit_cracker'>('smart_auto');
     const hash = [
         'dashboard',
+        'dtrader',
         'bot_builder',
         'chart',
         'easy_tool',
@@ -291,6 +292,28 @@ const AppWrapper = observer(() => {
                                 id='id-dbot-dashboard'
                             >
                                 <Dashboard handleTabChange={handleTabChange} />
+                            </div>
+                            <div
+                                label={
+                                    <div className='main__tabs-label'>
+                                        <LabelPairedChartLineCaptionRegularIcon
+                                            height='20px'
+                                            width='20px'
+                                            fill='var(--text-general)'
+                                        />
+                                        <Localize i18n_default_text='DTrader' />
+                                    </div>
+                                }
+                                id='id-dtrader'
+                            >
+                                <div style={{ width: '100%', height: 'calc(100vh - 100px)', overflow: 'hidden' }}>
+                                    <iframe 
+                                        src="https://localhost:8443" 
+                                        style={{ width: '100%', height: '100%', border: 'none' }}
+                                        title="DTrader"
+                                        allow="clipboard-read; clipboard-write; geolocation; microphone; camera; display-capture"
+                                    />
+                                </div>
                             </div>
                             <div
                                 label={
