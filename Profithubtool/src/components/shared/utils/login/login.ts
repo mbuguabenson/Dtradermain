@@ -36,7 +36,8 @@ export const loginUrl = ({ language }: TLoginUrl) => {
     const getOAuthUrl = () => {
         // Special strict fix for Vercel Production to avoid any dynamic parameter issues
         if (window.location.hostname === 'profithubtool.vercel.app') {
-            return `https://oauth.deriv.com/oauth2/authorize?app_id=113830&l=${language}&brand=deriv`;
+            const redirect_uri = `${window.location.protocol}//${window.location.host}${window.location.pathname === '/' ? '' : window.location.pathname}`;
+            return `https://oauth.deriv.com/oauth2/authorize?app_id=113830&l=${language}&brand=deriv&redirect_uri=${redirect_uri}`;
         }
 
         const current_domain = getCurrentProductionDomain();

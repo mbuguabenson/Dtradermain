@@ -9,7 +9,7 @@ export const getBaseTraderHubUrl = (): string => {
 
     const domain = 'deriv.com';
 
-    const is_staging = hostname.includes('staging');
+    const is_staging = hostname.includes('staging') && (hostname.includes('deriv.com') || hostname.includes('deriv.be') || hostname.includes('deriv.me'));
     const is_test =
         hostname === 'localhost' ||
         hostname === '127.0.0.1' ||
