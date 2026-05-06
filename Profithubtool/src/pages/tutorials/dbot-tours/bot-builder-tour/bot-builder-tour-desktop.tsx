@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '@/hooks/useStore';
+import { DBOT_TABS } from '@/constants/bot-contents';
 import { getSetting } from '@/utils/settings';
 import ReactJoyrideWrapper from '../common/react-joyride-wrapper';
 import TourEndDialog from '../common/tour-end-dialog';
@@ -14,7 +15,7 @@ const BotBuilderTourDesktop = observer(() => {
     const { active_tab, active_tour, setActiveTour, setTourDialogVisibility } = dashboard;
     const { is_load_modal_open } = load_modal;
     const token = getSetting('bot_builder_token');
-    if (!token && active_tab === 1) setTourDialogVisibility(true);
+    if (!token && active_tab === DBOT_TABS.BOT_BUILDER) setTourDialogVisibility(true);
 
     React.useEffect(() => {
         if (is_finished) {

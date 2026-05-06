@@ -5,6 +5,7 @@ import Text from '@/components/shared_ui/text';
 import { useStore } from '@/hooks/useStore';
 import { localize } from '@deriv-com/translations';
 import { useDevice } from '@deriv-com/ui';
+import { DBOT_TABS } from '@/constants/bot-contents';
 import OnboardTourHandler from '../tutorials/dbot-tours/onboarding-tour';
 import DashboardBotList from './bot-list/dashboard-bot-list';
 import Announcements from './announcements';
@@ -153,7 +154,7 @@ const DashboardComponent = observer(({ handleTabChange }: TMobileIconGuide) => {
             <InfoPanel />
 
             {/* Tours and Overlays */}
-            {dashboard.active_tab === 0 && <OnboardTourHandler is_mobile={!isDesktop} />}
+            {dashboard.active_tab === DBOT_TABS.DASHBOARD && <OnboardTourHandler is_mobile={!isDesktop} />}
             {/* Risk Disclaimer */}
             <React.Suspense fallback={null}>
                 <RiskDisclaimerModal is_open={is_risk_modal_open} onClose={() => setIsRiskModalOpen(false)} />

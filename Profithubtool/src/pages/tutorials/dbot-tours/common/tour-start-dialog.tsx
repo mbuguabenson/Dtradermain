@@ -21,7 +21,7 @@ const TourStartDialog = observer(() => {
     const { active_tab, is_tour_dialog_visible, setTourDialogVisibility, setActiveTour, setShowMobileTourDialog } =
         dashboard;
     const { isDesktop } = useDevice();
-    const tour_token = active_tab === 0 ? 'onboard_tour_token' : 'bot_builder_token';
+    const tour_token = active_tab === DBOT_TABS.DASHBOARD ? 'onboard_tour_token' : 'bot_builder_token';
     const toggleTour = () => {
         if (!isDesktop) setShowMobileTourDialog(false);
         setTourDialogVisibility(false);
@@ -86,7 +86,7 @@ const TourStartDialog = observer(() => {
     const header_text_size = isDesktop ? 's' : 'xs';
     const content_text_size = isDesktop ? 'xs' : 'xxs';
 
-    const tour_headers = active_tab === 0 ? onboarding_tour_header : getBotBuilderTourHeader(!isDesktop);
+    const tour_headers = active_tab === DBOT_TABS.DASHBOARD ? onboarding_tour_header : getBotBuilderTourHeader(!isDesktop);
     return (
         <div>
             <Dialog
