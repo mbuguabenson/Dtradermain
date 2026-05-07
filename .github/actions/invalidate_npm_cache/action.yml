@@ -8,4 +8,4 @@ runs:
     uses: actions/cache/save@13aacd865c20de90d75de3b17ebe84f7a17d57d2
     with:
       path: node_modules
-      key: ${{ runner.os }}-build-master-cache-${{ hashFiles('./package-lock.json') }}
+      key: ${{ runner.os }}-build-master-cache-v2-${{ hashFiles('./package-lock.json') }}

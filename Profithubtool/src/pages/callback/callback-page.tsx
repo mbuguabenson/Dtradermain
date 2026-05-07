@@ -9,11 +9,11 @@ import { observer } from 'mobx-react-lite';
 const CallbackPage = observer(() => {
     const { common } = useStore();
     const isProcessing = useRef(false);
-    
+
     // Detect mode from URL path for strict isolation
     const path = window.location.pathname;
     const detectedMode = path.includes('/legacy/') ? 'legacy' : 'new';
-    
+
     // Ensure API_MODE is synced with the callback we just entered
     if (localStorage.getItem('API_MODE') !== detectedMode) {
         localStorage.setItem('API_MODE', detectedMode);
@@ -45,17 +45,17 @@ const CallbackPage = observer(() => {
 
                 const incomingState = params.get('state');
                 const savedState = sessionStorage.getItem('pkce_state');
-                
+
                 console.log('[OAuth2] State Validation:', {
                     incoming: incomingState,
                     saved: savedState,
-                    match: incomingState === savedState
+                    match: incomingState === savedState,
                 });
 
                 if (!validatePKCEState(state)) {
                     console.error('[OAuth2] State mismatch! Possible CSRF attack.', {
                         incoming: incomingState,
-                        saved: savedState
+                        saved: savedState,
                     });
                     return;
                 }
@@ -71,7 +71,7 @@ const CallbackPage = observer(() => {
                     console.log('[OAuth2] Exchange Config:', {
                         client_id: DERIV_OAUTH_CLIENT_ID,
                         redirect_uri,
-                        grant_type: 'authorization_code'
+                        grant_type: 'authorization_code',
                     });
 
                     console.log('[OAuth2] Exchanging code for token...');
@@ -102,7 +102,7 @@ const CallbackPage = observer(() => {
                     // 1. Store tokens
                     localStorage.setItem('new_api_access_token', data.access_token);
                     localStorage.setItem('new_api_refresh_token', data.refresh_token);
-                    
+
                     // 2. Fetch full account list to support switching (Step 3 of checklist)
                     console.log('[OAuth2] Fetching account list...');
                     const accountsResponse = await fetch('https://api.derivws.com/trading/v1/options/accounts', {
@@ -112,7 +112,7 @@ const CallbackPage = observer(() => {
                         },
                     });
                     const accountsData = await accountsResponse.json();
-                    
+
                     if (accountsData.data && accountsData.data.length > 0) {
                         localStorage.setItem('new_api_accounts_list', JSON.stringify(accountsData.data));
                         // Set the first account as default active
@@ -139,7 +139,7 @@ const CallbackPage = observer(() => {
 
                 // Extract all params to a dictionary first
                 for (const [key, value] of params.entries()) {
-                    tokens[key] = value;
+                    tokens[key.trim()] = value;
                 }
 
                 // Parse accounts (acct1, token1, cur1, etc.)
@@ -174,7 +174,7 @@ const CallbackPage = observer(() => {
                 // 1. Save auth data for both apps to share
                 localStorage.setItem('accountsList', JSON.stringify(accountsList));
                 localStorage.setItem('clientAccounts', JSON.stringify(clientAccounts));
-                
+
                 // Also save in DTrader format for seamless cross-app login
                 localStorage.setItem('client.accounts', JSON.stringify(clientAccounts));
                 localStorage.setItem('config.tokens', JSON.stringify(tokens));

@@ -53,12 +53,12 @@ const Redirect = observer(() => {
     if (url_params.get('acct1') && url_params.get('token1')) {
         const tokens = {};
         url_params.forEach((value, key) => {
-            tokens[key] = value;
+            tokens[key.trim()] = value;
         });
         localStorage.setItem('config.tokens', JSON.stringify(tokens));
         localStorage.setItem('config.account1', url_params.get('token1'));
         localStorage.setItem('active_loginid', url_params.get('acct1'));
-        
+
         if (!sessionStorage.getItem('active_loginid') && /^(CR|MF|VRTC)\d/.test(url_params.get('acct1'))) {
             sessionStorage.setItem('active_loginid', url_params.get('acct1'));
         }
@@ -70,9 +70,10 @@ const Redirect = observer(() => {
         // Otherwise fall back to the tradershub or traders_hub route.
         const redirect_to_param = url_params.get('redirect_to');
         const is_in_iframe = window.self !== window.top;
-        const redirectTo = redirect_to_param
-            || sessionStorage.getItem('tradershub_redirect_to')
-            || (is_in_iframe ? '/dtrader' : routes.trade);
+        const redirectTo =
+            redirect_to_param ||
+            sessionStorage.getItem('tradershub_redirect_to') ||
+            (is_in_iframe ? '/dtrader' : routes.trade);
         sessionStorage.removeItem('tradershub_redirect_to');
         window.location.replace(redirectTo);
         return null;
@@ -394,7 +395,6 @@ const Redirect = observer(() => {
                 is_client_store_initialized
             ) {
                 const client_account_lists = JSON.parse(localStorage.getItem('client.accounts') || '{}');
-
 
                 const route_mappings = [
                     { pattern: /accumulator/i, route: routes.trade, type: 'accumulator' },
