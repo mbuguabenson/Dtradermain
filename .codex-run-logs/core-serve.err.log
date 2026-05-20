@@ -1,0 +1,44 @@
+(node:15396) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: [36mhttp://localhost:8443/[39m, [36mhttp://[::1]:8443/[39m
+<i> [webpack-dev-server] Content not from webpack is served from '[36mC:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\packages\core\public[39m' directory
+<i> [webpack-dev-server] 404s will fallback to '[36m/index.html[39m'
+<i> [webpack-dev-middleware] wait until bundle finished: /public/sprites/common.226f76480892ffe08b082668e3aadef4.svg
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /trader
+<i> [webpack-dev-middleware] wait until bundle finished: /trader
+(node:15396) [DEP_WEBPACK_DEPRECATION_ARRAY_TO_SET] DeprecationWarning: Compilation.chunks was changed from Array to Set (using Array method 'filter' is deprecated)
+(node:15396) [DEP_WEBPACK_DEPRECATION_ARRAY_TO_SET_LENGTH] DeprecationWarning: chunk.files was changed from Array to Set (using Array property 'length' is deprecated)
+(node:15396) [DEP_WEBPACK_DEPRECATION_ARRAY_TO_SET_INDEXER] DeprecationWarning: chunk.files was changed from Array to Set (indexing Array is deprecated)
+<i> [webpack-dev-middleware] wait until bundle finished: /js/core.vendors-node_modules_cloudflare_stream-react_dist_stream-react_esm_js-node_modules_datadog_br-2efd3b.6f8ff79f2deff212c3f4.js
+<i> [webpack-dev-middleware] wait until bundle finished: /js/core.vendors-node_modules_cloudflare_stream-react_dist_stream-react_esm_js-node_modules_datadog_br-2efd3b.6f8ff79f2deff212c3f4.js
+<i> [webpack-dev-middleware] wait until bundle finished: /css/core.vendors-node_modules_cloudflare_stream-react_dist_stream-react_esm_js-node_modules_datadog_br-2efd3b.d5051fc9397c04327aba.main.css
+<i> [webpack-dev-middleware] wait until bundle finished: /css/core.main~A.41a4b99c88dd5bbe2d48.main.css
+<i> [webpack-dev-middleware] wait until bundle finished: /css/core.main~c.02e68bc94edd2e1c56a0.main.css
+<i> [webpack-dev-middleware] wait until bundle finished: /css/core.main~i.6bfd9dd12a8929045195.main.css
+<i> [webpack-dev-middleware] wait until bundle finished: /css/core.main~i.6bfd9dd12a8929045195.main.css
+<i> [webpack-dev-middleware] wait until bundle finished: /css/core.main~c.02e68bc94edd2e1c56a0.main.css
+<i> [webpack-dev-middleware] wait until bundle finished: /css/core.main~A.41a4b99c88dd5bbe2d48.main.css
+<i> [webpack-dev-middleware] wait until bundle finished: /css/core.vendors-node_modules_cloudflare_stream-react_dist_stream-react_esm_js-node_modules_datadog_br-2efd3b.d5051fc9397c04327aba.main.css
+<i> [webpack-dev-middleware] wait until bundle finished: /js/core.vendors-node_modules_deriv_deriv-api_dist_DerivAPIBasic_js-node_modules_deriv_quill-icons_dis-d0c6ec.6f8ff79f2deff212c3f4.js
+<i> [webpack-dev-middleware] wait until bundle finished: /js/core.vendors-node_modules_deriv_deriv-api_dist_DerivAPIBasic_js-node_modules_deriv_quill-icons_dis-d0c6ec.6f8ff79f2deff212c3f4.js
+<i> [webpack-dev-middleware] wait until bundle finished: /js/core.chunk.node_modules_moment_locale_en-gb_js.850f5fbd37575830ac43.js
+<i> [webpack-dev-middleware] wait until bundle finished: /js/core.chunk.node_modules_deriv_deriv-charts_dist_smartcharts_css.850f5fbd37575830ac43.js
+<i> [webpack-dev-middleware] wait until bundle finished: /css/core.chunk.vendors-node_modules_deriv_deriv-charts_dist_smartcharts_css-node_modules_deriv_deriv-charts_-9cf307.de9aaf13f8f26cc05435.css
+<i> [webpack-dev-middleware] wait until bundle finished: /public/images/common/logos/platform_logos/ic_platform_deriv_144x144.png
+<i> [webpack-dev-middleware] wait until bundle finished: /css/core.chunk.default-App_Components_Layout_Header_index_js-App_Components_Layout_Header_toggle-menu-drawer-9f9630.c788ce77115a5a574c3a.css
+<i> [webpack-dev-middleware] wait until bundle finished: /css/core.chunk.dtrader-header.55324854d53a409c49ce.css
+<i> [webpack-dev-middleware] wait until bundle finished: /js/core.chunk.account-info.850f5fbd37575830ac43.js
+<i> [webpack-dev-middleware] wait until bundle finished: /js/core.chunk.dtrader-header.850f5fbd37575830ac43.js
+<i> [webpack-dev-middleware] wait until bundle finished: /public/sprites/common.226f76480892ffe08b082668e3aadef4.svg
+<i> [webpack-dev-middleware] wait until bundle finished: /js/core.chunk.default-App_Components_Layout_Header_index_js-App_Components_Layout_Header_toggle-menu-drawer-9f9630.850f5fbd37575830ac43.js
+<i> [webpack-dev-middleware] wait until bundle finished: /js/core.chunk.trader.850f5fbd37575830ac43.js
+<i> [webpack-dev-middleware] wait until bundle finished: /js/core.chunk.vendors-node_modules_deriv_deriv-charts_dist_smartcharts_js.850f5fbd37575830ac43.js
+npm error Lifecycle script `serve` failed with error:
+npm error code 127
+npm error path C:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\packages\core
+npm error workspace @deriv/core@0.1.0
+npm error location C:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\packages\core
+npm error command failed
+npm error command C:\Program Files\Git\bin\bash.exe -c f() { echo "Serving..." && ../../node_modules/.bin/webpack serve --config "./build/webpack.config.js" --env open $1;}; f trader

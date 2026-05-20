@@ -1,0 +1,577 @@
+
+> @deriv/core@0.1.0 serve
+> f() { echo "Serving..." && ../../node_modules/.bin/webpack serve --config "./build/webpack.config.js" --env open $1;}; f trader
+
+Serving...
+951 assets
+Entrypoint [1mmain[39m[22m 31.2 MiB = 15 assets
+orphan modules 76.4 MiB (javascript) 990 KiB (css/mini-extract) [1m[33m[orphan][39m[22m 30712 modules
+runtime modules 13.9 KiB 19 modules
+built modules 85.4 MiB (javascript) 2.37 MiB (css/mini-extract) [1m[33m[built][39m[22m
+  modules by path [1m../../[39m[22m 83.5 MiB (javascript) 1.95 MiB (css/mini-extract)
+    javascript modules 77.3 MiB 18065 modules
+    css modules 1.95 MiB 166 modules
+    json modules 6.16 MiB 26 modules
+  modules by path [1m./[39m[22m 1.31 MiB (javascript) 431 KiB (css/mini-extract) 387 modules
+  modules by path [1m../node_modules/[39m[22m 625 KiB (javascript) 3.68 KiB (css/mini-extract)
+    modules by path [1m../node_modules/@deriv-com/auth-client/dist/[39m[22m 595 KiB (javascript) 3.68 KiB (css/mini-extract) 14 modules
+    modules by path [1m../node_modules/@deriv/quill-icons/dist/esm/[39m[22m 26.4 KiB
+      [1m../node_modules/@deriv/quill-icons/dist/esm/react/Standalone/StandaloneCh...(truncated)[39m[22m 751 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+      + 3 modules
+    [1m../node_modules/js-cookie/src/js.cookie.js[39m[22m 3.79 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1mLOG from GenerateSW[39m[22m
+<i> [1m[32mThe service worker at service-worker.js will precache[39m[22m
+<i> [1m[32m        0 URLs, totaling 0 B.[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_APPLICATION_ID'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_CLIENT_TOKEN'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_REPLAY_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_CLIENT_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_DECRYPTION_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.IS_GROWTHBOOK_ENABLED'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.NODE_ENV'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REF_NAME'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REMOTE_CONFIG_URL'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.RUDDERSTACK_KEY'[39m[22m
+
+[1m[33m2937 WARNINGS in child compilations (Use 'stats.children: true' resp. '--stats-children' for more details)[39m[22m
+
+11 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+[1m[31mERROR[39m[22m in [1munable to locate 'C:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\node_modules\@deriv\cashier\dist\cashier\public' glob[39m[22m
+
+webpack 5.105.0 compiled with [1m[31m1 error[39m[22m and [1m[33m2948 warnings[39m[22m in 361630 ms
+assets by status 176 MiB [1m[32m[cached][39m[22m 532 assets
+assets by path [1m[32m.[39m[22m 232 MiB
+  assets by path [1m[32mjs/[39m[22m 232 MiB 412 assets
+  assets by path [1m[32m*.map[39m[22m 215 KiB
+    asset [1m[32mworkbox-d3667991.js.map[39m[22m 205 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js.map[39m[22m 10.1 KiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.json[39m[22m 121 KiB
+    asset [1m[32masset-manifest.json[39m[22m 120 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mmanifest.json[39m[22m 1.66 KiB [1m[32m[emitted][39m[22m [from: templates/app/manifest.json] [1m[32m[copied][39m[22m
+  assets by path [1m[32m*.js[39m[22m 120 KiB
+    asset [1m[32mworkbox-d3667991.js[39m[22m 116 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js[39m[22m 3.97 KiB [1m[32m[emitted][39m[22m
+  asset [1m[32mindex.html[39m[22m 17.1 KiB [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m 31.2 MiB = 15 assets
+cached modules 162 MiB (javascript) 3.34 MiB (css/mini-extract) [1m[32m[cached][39m[22m 49372 modules
+runtime modules 13.9 KiB 19 modules
+javascript modules 480 bytes
+  [1m../../translations/src/translations/ lazy ^\.\/.*\.json$ referencedExports:  chu...(truncated)[39m[22m 160 bytes [1m[33m[built][39m[22m
+  [1m../../../node_modules/moment/locale/ lazy ^\.\/.*$ namespace object[39m[22m 160 bytes [1m[33m[built][39m[22m
+  [1m../../../node_modules/dayjs/locale/ lazy ^\.\/.*\.js$ referencedExports: default...(truncated)[39m[22m 160 bytes [1m[33m[optional][39m[22m [1m[33m[built][39m[22m
+
+[1mLOG from GenerateSW[39m[22m
+<i> [1m[32mThe service worker at service-worker.js will precache[39m[22m
+<i> [1m[32m        0 URLs, totaling 0 B.[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_APPLICATION_ID'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_CLIENT_TOKEN'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_REPLAY_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_CLIENT_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_DECRYPTION_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.IS_GROWTHBOOK_ENABLED'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.NODE_ENV'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REF_NAME'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REMOTE_CONFIG_URL'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.RUDDERSTACK_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mGenerateSW has been called multiple times, perhaps due to running webpack in --watch mode. The precache manifest generated after the first call may be inaccurate! Please see https://github.com/GoogleChrome/workbox/issues/1790 for more information.[39m[22m
+
+11 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+[1m[31mERROR[39m[22m in [1munable to locate 'C:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\node_modules\@deriv\cashier\dist\cashier\public' glob[39m[22m
+
+webpack 5.105.0 compiled with [1m[31m1 error[39m[22m and [1m[33m12 warnings[39m[22m in 90536 ms
+assets by status 388 MiB [1m[32m[cached][39m[22m 906 assets
+assets by path [1m[32m.[39m[22m 19.7 MiB
+  assets by path [1m[32mtrader/js/*.js[39m[22m 17.6 MiB 29 assets
+  assets by path [1m[32mtrader/css/*.css[39m[22m 1.63 MiB 9 assets
+  assets by path [1m[32m*.map[39m[22m 215 KiB
+    asset [1m[32mworkbox-d3667991.js.map[39m[22m 205 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js.map[39m[22m 10.1 KiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.json[39m[22m 121 KiB
+    asset [1m[32masset-manifest.json[39m[22m 120 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mmanifest.json[39m[22m 1.66 KiB [1m[32m[emitted][39m[22m [from: templates/app/manifest.json] [1m[32m[copied][39m[22m
+  assets by path [1m[32m*.js[39m[22m 120 KiB
+    asset [1m[32mworkbox-d3667991.js[39m[22m 116 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js[39m[22m 3.97 KiB [1m[32m[emitted][39m[22m
+  asset [1m[32mtrader/asset-manifest.json[39m[22m 5.89 KiB [1m[32m[emitted][39m[22m [from: ../../../node_modules/@deriv/trader/dist/trader/asset-manifest.json] [1m[32m[copied][39m[22m
+Entrypoint [1mmain[39m[22m 31.2 MiB = 15 assets
+cached modules 162 MiB (javascript) 3.34 MiB (css/mini-extract) 13.9 KiB (runtime) [1m[32m[cached][39m[22m 49390 modules
+javascript modules 160 KiB
+  modules by path [1m../../../node_modules/[39m[22m 320 bytes
+    [1m../../../node_modules/moment/locale/ lazy ^\.\/.*$ namespace object[39m[22m 160 bytes [1m[33m[built][39m[22m
+    [1m../../../node_modules/dayjs/locale/ lazy ^\.\/.*\.js$ referencedExports: default...(truncated)[39m[22m 160 bytes [1m[33m[optional][39m[22m [1m[33m[built][39m[22m
+  [1m../../translations/src/translations/ lazy ^\.\/.*\.json$ referencedExports:  chu...(truncated)[39m[22m 160 bytes [1m[33m[built][39m[22m
+  [1m../../trader/dist/trader/js/trader.js[39m[22m 160 KiB [1m[33m[built][39m[22m
+
+[1mLOG from GenerateSW[39m[22m
+<i> [1m[32mThe service worker at service-worker.js will precache[39m[22m
+<i> [1m[32m        0 URLs, totaling 0 B.[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_APPLICATION_ID'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_CLIENT_TOKEN'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_REPLAY_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_CLIENT_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_DECRYPTION_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.IS_GROWTHBOOK_ENABLED'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.NODE_ENV'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REF_NAME'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REMOTE_CONFIG_URL'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.RUDDERSTACK_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mGenerateSW has been called multiple times, perhaps due to running webpack in --watch mode. The precache manifest generated after the first call may be inaccurate! Please see https://github.com/GoogleChrome/workbox/issues/1790 for more information.[39m[22m
+
+11 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+[1m[31mERROR[39m[22m in [1munable to locate 'C:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\node_modules\@deriv\cashier\dist\cashier\public' glob[39m[22m
+
+webpack 5.105.0 compiled with [1m[31m1 error[39m[22m and [1m[33m12 warnings[39m[22m in 85164 ms
+assets by status 407 MiB [1m[32m[cached][39m[22m 943 assets
+assets by path [1m[32m.[39m[22m 1.4 MiB
+  assets by path [1m[32mtrader/js/*.js[39m[22m 976 KiB
+    asset [1m[32mtrader/js/trader.src_Modules_Trading_Components_Form_TradeParams_Accumulator_accumulators-info-display_tsx-src-a7086a.ba79294e906b2edcfc37.js[39m[22m 914 KiB [1m[32m[emitted][39m[22m [from: ../../../node_modules/@deriv/trader/dist/trader/js/trader.src_Modules_Trading_Components_Form_TradeParams_Accumulator_accumulators-info-display_tsx-src-a7086a.ba79294e906b2edcfc37.js] [1m[32m[copied][39m[22m
+    asset [1m[32mtrader/js/trader.src_Modules_Contract_Containers_replay-chart_tsx-src_Stores_Modules_Trading_Helpers_logic_ts.b35c560bfebc316020a6.js[39m[22m 61.8 KiB [1m[32m[emitted][39m[22m [from: ../../../node_modules/@deriv/trader/dist/trader/js/trader.src_Modules_Contract_Containers_replay-chart_tsx-src_Stores_Modules_Trading_Helpers_logic_ts.b35c560bfebc316020a6.js] [1m[32m[copied][39m[22m
+  assets by path [1m[32m*.map[39m[22m 215 KiB
+    asset [1m[32mworkbox-d3667991.js.map[39m[22m 205 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js.map[39m[22m 10.1 KiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.json[39m[22m 121 KiB
+    asset [1m[32masset-manifest.json[39m[22m 120 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mmanifest.json[39m[22m 1.66 KiB [1m[32m[emitted][39m[22m [from: templates/app/manifest.json] [1m[32m[copied][39m[22m
+  assets by path [1m[32m*.js[39m[22m 120 KiB
+    asset [1m[32mworkbox-d3667991.js[39m[22m 116 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js[39m[22m 3.97 KiB [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m 31.2 MiB = 15 assets
+cached modules 162 MiB (javascript) 3.34 MiB (css/mini-extract) 13.9 KiB (runtime) [1m[32m[cached][39m[22m 49394 modules
+
+[1mLOG from GenerateSW[39m[22m
+<i> [1m[32mThe service worker at service-worker.js will precache[39m[22m
+<i> [1m[32m        0 URLs, totaling 0 B.[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_APPLICATION_ID'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_CLIENT_TOKEN'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_REPLAY_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_CLIENT_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_DECRYPTION_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.IS_GROWTHBOOK_ENABLED'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.NODE_ENV'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REF_NAME'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REMOTE_CONFIG_URL'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.RUDDERSTACK_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mGenerateSW has been called multiple times, perhaps due to running webpack in --watch mode. The precache manifest generated after the first call may be inaccurate! Please see https://github.com/GoogleChrome/workbox/issues/1790 for more information.[39m[22m
+
+11 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+[1m[31mERROR[39m[22m in [1munable to locate 'C:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\node_modules\@deriv\cashier\dist\cashier\public' glob[39m[22m
+
+webpack 5.105.0 compiled with [1m[31m1 error[39m[22m and [1m[33m12 warnings[39m[22m in 75986 ms
+assets by status 176 MiB [1m[32m[cached][39m[22m 532 assets
+assets by path [1m[32m.[39m[22m 232 MiB
+  assets by path [1m[32mjs/[39m[22m 232 MiB 412 assets
+  assets by path [1m[32m*.map[39m[22m 215 KiB
+    asset [1m[32mworkbox-d3667991.js.map[39m[22m 205 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js.map[39m[22m 10.1 KiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.json[39m[22m 121 KiB
+    asset [1m[32masset-manifest.json[39m[22m 120 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mmanifest.json[39m[22m 1.66 KiB [1m[32m[emitted][39m[22m [from: templates/app/manifest.json] [1m[32m[copied][39m[22m
+  assets by path [1m[32m*.js[39m[22m 120 KiB
+    asset [1m[32mworkbox-d3667991.js[39m[22m 116 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js[39m[22m 3.97 KiB [1m[32m[emitted][39m[22m
+  asset [1m[32mindex.html[39m[22m 17.1 KiB [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m 31.2 MiB = 15 assets
+cached modules 162 MiB (javascript) 3.34 MiB (css/mini-extract) [1m[32m[cached][39m[22m 49373 modules
+runtime modules 13.9 KiB 19 modules
+javascript modules 2.14 KiB
+  [1m../../../node_modules/dayjs/locale/ lazy ^\.\/.*\.js$ referencedExports: default...(truncated)[39m[22m 160 bytes [1m[33m[optional][39m[22m [1m[33m[built][39m[22m
+  [1m./App/Components/Layout/Header/login-button.jsx[39m[22m 1.99 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1mLOG from GenerateSW[39m[22m
+<i> [1m[32mThe service worker at service-worker.js will precache[39m[22m
+<i> [1m[32m        0 URLs, totaling 0 B.[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_APPLICATION_ID'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_CLIENT_TOKEN'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_REPLAY_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_CLIENT_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_DECRYPTION_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.IS_GROWTHBOOK_ENABLED'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.NODE_ENV'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REF_NAME'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REMOTE_CONFIG_URL'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.RUDDERSTACK_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mGenerateSW has been called multiple times, perhaps due to running webpack in --watch mode. The precache manifest generated after the first call may be inaccurate! Please see https://github.com/GoogleChrome/workbox/issues/1790 for more information.[39m[22m
+
+11 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+[1m[31mERROR[39m[22m in [1munable to locate 'C:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\node_modules\@deriv\cashier\dist\cashier\public' glob[39m[22m
+
+webpack 5.105.0 compiled with [1m[31m1 error[39m[22m and [1m[33m12 warnings[39m[22m in 125854 ms
+assets by status 176 MiB [1m[32m[cached][39m[22m 532 assets
+assets by path [1m[32m.[39m[22m 232 MiB
+  assets by path [1m[32mjs/[39m[22m 232 MiB 412 assets
+  assets by path [1m[32m*.map[39m[22m 215 KiB
+    asset [1m[32mworkbox-d3667991.js.map[39m[22m 205 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js.map[39m[22m 10.1 KiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.json[39m[22m 121 KiB
+    asset [1m[32masset-manifest.json[39m[22m 120 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mmanifest.json[39m[22m 1.66 KiB [1m[32m[emitted][39m[22m [from: templates/app/manifest.json] [1m[32m[copied][39m[22m
+  assets by path [1m[32m*.js[39m[22m 120 KiB
+    asset [1m[32mworkbox-d3667991.js[39m[22m 116 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js[39m[22m 3.97 KiB [1m[32m[emitted][39m[22m
+  asset [1m[32mindex.html[39m[22m 17.1 KiB [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m 31.2 MiB = 15 assets
+cached modules 162 MiB (javascript) 3.34 MiB (css/mini-extract) [1m[32m[cached][39m[22m 49374 modules
+runtime modules 13.9 KiB 19 modules
+[1m./App/Components/Layout/Header/login-button.jsx[39m[22m 1.99 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1mLOG from GenerateSW[39m[22m
+<i> [1m[32mThe service worker at service-worker.js will precache[39m[22m
+<i> [1m[32m        0 URLs, totaling 0 B.[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_APPLICATION_ID'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_CLIENT_TOKEN'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_REPLAY_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_CLIENT_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_DECRYPTION_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.IS_GROWTHBOOK_ENABLED'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.NODE_ENV'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REF_NAME'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REMOTE_CONFIG_URL'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.RUDDERSTACK_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mGenerateSW has been called multiple times, perhaps due to running webpack in --watch mode. The precache manifest generated after the first call may be inaccurate! Please see https://github.com/GoogleChrome/workbox/issues/1790 for more information.[39m[22m
+
+11 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+[1m[31mERROR[39m[22m in [1munable to locate 'C:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\node_modules\@deriv\cashier\dist\cashier\public' glob[39m[22m
+
+webpack 5.105.0 compiled with [1m[31m1 error[39m[22m and [1m[33m12 warnings[39m[22m in 89869 ms
+assets by status 390 MiB [1m[32m[cached][39m[22m 916 assets
+assets by path [1m[32m.[39m[22m 18 MiB
+  assets by path [1m[32mtrader/js/*.js[39m[22m 17.6 MiB
+    asset [1m[32mtrader/js/trader.vendors-node_modules_datadog_browser-rum_esm_entries_main_js-node_modules_bowser_es5_js-node_-2936ed.5e56ff28aec6e1d417d8.js[39m[22m 5.71 MiB [1m[32m[emitted][39m[22m [from: ../../../node_modules/@deriv/trader/dist/trader/js/trader.vendors-node_modules_datadog_browser-rum_esm_entries_main_js-node_modules_bowser_es5_js-node_-2936ed.5e56ff28aec6e1d417d8.js] [1m[32m[copied][39m[22m
+    asset [1m[32mtrader/js/trader.vendors-node_modules_react-beautiful-dnd_dist_react-beautiful-dnd_esm_js-node_modules_react-s-7cdcc7.235ba4d5f215ff22bb43.js[39m[22m 4.8 MiB [1m[32m[emitted][39m[22m [from: ../../../node_modules/@deriv/trader/dist/trader/js/trader.vendors-node_modules_react-beautiful-dnd_dist_react-beautiful-dnd_esm_js-node_modules_react-s-7cdcc7.235ba4d5f215ff22bb43.js] [1m[32m[copied][39m[22m
+    + 27 assets
+  assets by path [1m[32m*.map[39m[22m 215 KiB
+    asset [1m[32mworkbox-d3667991.js.map[39m[22m 205 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js.map[39m[22m 10.1 KiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.json[39m[22m 121 KiB
+    asset [1m[32masset-manifest.json[39m[22m 120 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mmanifest.json[39m[22m 1.66 KiB [1m[32m[emitted][39m[22m [from: templates/app/manifest.json] [1m[32m[copied][39m[22m
+  assets by path [1m[32m*.js[39m[22m 120 KiB
+    asset [1m[32mworkbox-d3667991.js[39m[22m 116 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js[39m[22m 3.97 KiB [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m 31.2 MiB = 15 assets
+cached modules 162 MiB (javascript) 3.34 MiB (css/mini-extract) 13.9 KiB (runtime) [1m[32m[cached][39m[22m 49393 modules
+[1m../../trader/dist/trader/js/trader.js[39m[22m 160 KiB [1m[33m[built][39m[22m
+
+[1mLOG from GenerateSW[39m[22m
+<i> [1m[32mThe service worker at service-worker.js will precache[39m[22m
+<i> [1m[32m        0 URLs, totaling 0 B.[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_APPLICATION_ID'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_CLIENT_TOKEN'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_REPLAY_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_CLIENT_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_DECRYPTION_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.IS_GROWTHBOOK_ENABLED'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.NODE_ENV'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REF_NAME'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REMOTE_CONFIG_URL'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.RUDDERSTACK_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mGenerateSW has been called multiple times, perhaps due to running webpack in --watch mode. The precache manifest generated after the first call may be inaccurate! Please see https://github.com/GoogleChrome/workbox/issues/1790 for more information.[39m[22m
+
+11 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+[1m[31mERROR[39m[22m in [1munable to locate 'C:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\node_modules\@deriv\cashier\dist\cashier\public' glob[39m[22m
+
+webpack 5.105.0 compiled with [1m[31m1 error[39m[22m and [1m[33m12 warnings[39m[22m in 76892 ms
+assets by status 408 MiB [1m[32m[cached][39m[22m 945 assets
+assets by path [1m[32m.[39m[22m 457 KiB
+  assets by path [1m[32m*.map[39m[22m 215 KiB
+    asset [1m[32mworkbox-d3667991.js.map[39m[22m 205 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js.map[39m[22m 10.1 KiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.json[39m[22m 121 KiB
+    asset [1m[32masset-manifest.json[39m[22m 120 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mmanifest.json[39m[22m 1.66 KiB [1m[32m[emitted][39m[22m [from: templates/app/manifest.json] [1m[32m[copied][39m[22m
+  assets by path [1m[32m*.js[39m[22m 120 KiB
+    asset [1m[32mworkbox-d3667991.js[39m[22m 116 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js[39m[22m 3.97 KiB [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m 31.2 MiB = 15 assets
+cached modules 162 MiB (javascript) 3.34 MiB (css/mini-extract) 13.9 KiB (runtime) [1m[32m[cached][39m[22m 49394 modules
+
+[1mLOG from GenerateSW[39m[22m
+<i> [1m[32mThe service worker at service-worker.js will precache[39m[22m
+<i> [1m[32m        0 URLs, totaling 0 B.[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_APPLICATION_ID'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_CLIENT_TOKEN'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_REPLAY_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_CLIENT_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_DECRYPTION_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.IS_GROWTHBOOK_ENABLED'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.NODE_ENV'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REF_NAME'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REMOTE_CONFIG_URL'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.RUDDERSTACK_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mGenerateSW has been called multiple times, perhaps due to running webpack in --watch mode. The precache manifest generated after the first call may be inaccurate! Please see https://github.com/GoogleChrome/workbox/issues/1790 for more information.[39m[22m
+
+11 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+[1m[31mERROR[39m[22m in [1munable to locate 'C:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\node_modules\@deriv\cashier\dist\cashier\public' glob[39m[22m
+
+webpack 5.105.0 compiled with [1m[31m1 error[39m[22m and [1m[33m12 warnings[39m[22m in 78732 ms
+assets by status 406 MiB [1m[32m[cached][39m[22m 934 assets
+assets by path [1m[32m.[39m[22m 2.46 MiB
+  assets by path [1m[32mtrader/[39m[22m 2.01 MiB
+    assets by path [1m[32mtrader/css/*.css[39m[22m 1.63 MiB 9 assets
+    asset [1m[32mtrader/js/trader.trader-app.ebc7ec16bf91e8774189.js[39m[22m 389 KiB [1m[32m[emitted][39m[22m [from: ../../../node_modules/@deriv/trader/dist/trader/js/trader.trader-app.ebc7ec16bf91e8774189.js] [1m[32m[copied][39m[22m
+    asset [1m[32mtrader/asset-manifest.json[39m[22m 5.89 KiB [1m[32m[emitted][39m[22m [from: ../../../node_modules/@deriv/trader/dist/trader/asset-manifest.json] [1m[32m[copied][39m[22m
+  assets by path [1m[32m*.map[39m[22m 215 KiB
+    asset [1m[32mworkbox-d3667991.js.map[39m[22m 205 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js.map[39m[22m 10.1 KiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.json[39m[22m 121 KiB
+    asset [1m[32masset-manifest.json[39m[22m 120 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mmanifest.json[39m[22m 1.66 KiB [1m[32m[emitted][39m[22m [from: templates/app/manifest.json] [1m[32m[copied][39m[22m
+  assets by path [1m[32m*.js[39m[22m 120 KiB
+    asset [1m[32mworkbox-d3667991.js[39m[22m 116 KiB [1m[32m[emitted][39m[22m
+    asset [1m[32mservice-worker.js[39m[22m 3.97 KiB [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m 31.2 MiB = 15 assets
+cached modules 162 MiB (javascript) 3.34 MiB (css/mini-extract) 13.9 KiB (runtime) [1m[32m[cached][39m[22m 49394 modules
+
+[1mLOG from GenerateSW[39m[22m
+<i> [1m[32mThe service worker at service-worker.js will precache[39m[22m
+<i> [1m[32m        0 URLs, totaling 0 B.[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_APPLICATION_ID'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_CLIENT_TOKEN'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_REPLAY_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.DATADOG_SESSION_SAMPLE_RATE'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_CLIENT_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.GROWTHBOOK_DECRYPTION_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.IS_GROWTHBOOK_ENABLED'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.NODE_ENV'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REF_NAME'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.REMOTE_CONFIG_URL'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mDefinePlugin
+[1m[31mConflicting[39m[22m[1m values for 'process.env.RUDDERSTACK_KEY'[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mGenerateSW has been called multiple times, perhaps due to running webpack in --watch mode. The precache manifest generated after the first call may be inaccurate! Please see https://github.com/GoogleChrome/workbox/issues/1790 for more information.[39m[22m
+
+11 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+[1m[31mERROR[39m[22m in [1munable to locate 'C:\Users\Castel Technologies\Videos\Dtradermain-main\Dtradermain2026\node_modules\@deriv\cashier\dist\cashier\public' glob[39m[22m
+
+webpack 5.105.0 compiled with [1m[31m1 error[39m[22m and [1m[33m12 warnings[39m[22m in 80328 ms
